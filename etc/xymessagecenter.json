@@ -1,0 +1,49 @@
+{
+  "sys_conf": {
+    "debug": true,
+    "__LogLevel": "日志级别: 1Trace 2Debug 3Info 4Warn 5Error(默认) 6Fatal 7Off",
+    "log_level": 3,
+    "log_file_level": 4,
+    "log_api": "",
+    "main_config": {
+      "method": "GetMonitorSource",
+      "__SecretName": "__加密的 Key 保存的环境变量名",
+      "secret_name": "MSG_XY_MONITOR_API_KEY",
+      "api": "http://open.api/get_source?fmt=json&name=message-center-main&token=",
+      "__TimeDuration": "单位(秒), <30 秒时禁用",
+      "interval": 66
+    }
+  },
+  "dd_conf": {
+    "agent_id": 123456789,
+    "media": {
+      "image": {
+        "__Ext": "图片格式, 扩展名, 用 . 分隔, 如: .doc.docx",
+        "ext": ".jpg",
+        "__Size": "(KB) 大小限制",
+        "size": 1000
+      },
+      "voice": {
+        "ext": ".amr",
+        "size": 2000
+      },
+      "file": {
+        "ext": ".doc.docx.xls.xlsx.ppt.pptx.zip.pdf.rar",
+        "size": 10000
+      }
+    },
+    "__(可选)发送消息的 APP_KEY 环境变量名": "默认为: MSG_DD_APP_KEY",
+    "app_key_name": "MSG_DD_APP_KEY",
+    "__(可选)密钥环境变量名": "默认为: MSG_DD_APP_SECRET",
+    "app_secret_name": "MSG_DD_APP_SECRET",
+    "white_list": [
+      "127.0.0.1",
+      "12.3.4.5/32",
+      "__注释行",
+      "fe80::d295:66ff:fe75:f3cd/64",
+      "::1/128",
+      " ",
+      "10.0.1.0/24"
+    ]
+  }
+}
